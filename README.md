@@ -13,7 +13,7 @@ git clone https://github.com/UW-ARGUS/rpi-testing.git
 2. Ensure you have python version 3.11 or greater installed. Run the command below to check the python version.
 ```
 python --version
-# Example output: Python 3.11.9
+# Example output: Python 3.11.2
 ```
 
 3. Create a virtual environment. At the root of the repository, run the command below. This command should create a hidden folder at the root of the repository named `.venv`.
