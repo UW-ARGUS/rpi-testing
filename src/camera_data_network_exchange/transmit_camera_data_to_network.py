@@ -77,9 +77,9 @@ def main(
     return 0
 
 if __name__ == "__main__":
-    host = "127.0.0.1"
+    host = "192.168.194.44" # replace with server IP address
     port = 65432
-    device_index = 0
+    device_index = 0 # replace if needed with index
     transmission_frequency = 60.0
 
     result_main = main(host, port, device_index, transmission_frequency)
