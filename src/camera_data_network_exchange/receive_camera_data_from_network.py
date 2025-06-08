@@ -62,18 +62,23 @@ def main(host: str, port: int) -> int:
                 cv2.FONT_HERSHEY_SIMPLEX,  # Font type
                 0.5, # Font size
                 (255, 0, 255),  # Fuschia
-                1,
-            )  # Line thickness
+                1,  # Line thickness
+            )
 
             cv2.imshow(f"Image display", image)
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 print("Exiting image display")
                 break
+
+            if cv2.getWindowProperty("Image display", cv2.WND_PROP_VISIBLE) < 1:
+                print("Exiting image display")
+                break
         else:
             print("Failed to decode image")
 
     cv2.destroyAllWindows()
+    connection.close()
     
     return 0
 
